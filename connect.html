@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year 2026!</title>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background: linear-gradient(to bottom, #fff0f5, #ffe6f0);
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        color: #ff3366;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .page {
+        text-align: center;
+        padding: 30px;
+        max-width: 90%;
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+    }
+    .active {
+        display: flex; 
+    }
+    h1 {
+        font-size: 2.8em;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 1.4em;
+        margin-bottom: 30px;
+    }
+    button {
+        background-color: #ffb3d9;
+        border: none;
+        padding: 18px 40px;
+        font-size: 1.2em;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin: 5px;
+        color: #fff;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(255, 51, 102, 0.3);
+    }
+    button:hover {
+        background-color: #ff66aa;
+        transform: scale(1.1);
+    }
+    .cute-photo {
+        max-width: 350px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+    body {
+        padding: 20px; 
+    }
+    h1 {
+        font-size: 2em; 
+    }
+    p {
+        font-size: 1.1em; 
+    }
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .cute-photo {
+        max-width: 90%; 
+    }
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="page1" class="page active">
+    <h1>🎉 Happy New Year, Vathna! Today is the first day of 2026! 🎉</h1>
+    <button onclick="nextPage(1)">✨ Click me! ✨</button>
+</div>
+
+<div id="page2" class="page">
+    <h1>💖 A Special Wish for You 💖</h1>
+    <p>I wish you more happiness, laughter, and joy this year! ✨</p>
+    <img src="https://media.tenor.com/Rh2GZjVhteYAAAAj/tonton-friends-tonton.gif" class="cute-photo" alt="Cute photo 1">
+    <button onclick="nextPage(2)">✨ Next! ✨</button>
+    <button onclick="prevPage(2)">Back</button>
+</div>
+
+<div id="page3" class="page">
+    <h1>🌸 Another Little Surprise 🌸</h1>
+    <p>May your days be filled with smiles, sweet moments, and little joys! 💕</p>
+    <img src="https://i.pinimg.com/originals/df/2c/92/df2c924cdd5216612a3f7d893a62201c.gif" class="cute-photo" alt="Cute photo 2">
+    <button onclick="nextPage(3)">✨ Next! ✨</button>
+    <button onclick="prevPage(3)">Back</button>
+</div>
+
+<div id="page4" class="page">
+    <h1>✨ Happy 2026! I hope this will make up for every unexpected thing you met last time! ✨</h1>
+    <p>I hope this year is full of joy, fun little surprises, and moments that make you feel special.💖<br><br>Khom rean tver lerng 4 days ter ot torn yk jea ka ban sos hz jet dol mg aii kr send tg jg pdoy tv🙁Hope that you will like it and make your day even though it looks kinda messy...</p>
+    <img src="https://i.pinimg.com/originals/fd/c3/41/fdc3419a0809fd8d424fa27492c89205.gif" class="cute-photo" alt="Cute photo 3">
+    <button onclick="prevPage(4)">Hehe🌷</button>
+</div>
+
+<script>
+function nextPage(current) {
+    document.getElementById('page' + current).classList.remove('active');
+    const next = current + 1;
+    document.getElementById('page' + next).classList.add('active');
+}
+
+function prevPage(current) {
+    document.getElementById('page' + current).classList.remove('active');
+    const prev = current - 1;
+    document.getElementById('page' + prev).classList.add('active');
+}
+</script>
+
+</body>
+</html>
